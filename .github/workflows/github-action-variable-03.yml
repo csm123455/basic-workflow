@@ -10,3 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Hello, Var_Test"
+      - run: echo " Hello, ${{ vars.VAR_TEST_Value }}"
