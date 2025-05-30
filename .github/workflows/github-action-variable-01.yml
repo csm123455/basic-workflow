@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MESSAGE: Hello
-    steps:
+        steps:
       - name: "It's Friday"
-        run: echo "Today is $DAY_OF_WEEK!"
+        run: echo "$MESSAGE, Today is $DAY_OF_WEEK!"
+
+check-var2:
+  runs-on: ubuntu-latest
+  steps:
+    - name: "It's Friday"
+      run: echo "$MESSAGE, Today is $DAY_OF_WEEK!"
