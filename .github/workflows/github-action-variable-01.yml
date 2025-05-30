@@ -19,6 +19,10 @@ jobs:
 
   check-var2:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        fruits: [Apple, Banana, Kiwi]
+        
     steps:
-      - name: "It's Day"
-        run: echo "$MESSAGE, Today is $DAY_OF_WEEK!"
+      - name: "It's fruits"
+        run: echo "Hello, ${{ matrix.fruits }}"
