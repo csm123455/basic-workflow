@@ -13,11 +13,12 @@ jobs:
     env:
       MESSAGE: Hello
     steps:
-      - name: "It's Friday"
+      - name: "It's Day"
+        if: ${{ env.DAY_OFWEEK == 'Thursday'}}
         run: echo "$MESSAGE, Today is $DAY_OF_WEEK!"
 
   check-var2:
     runs-on: ubuntu-latest
     steps:
-      - name: "It's Friday"
+      - name: "It's Day"
         run: echo "$MESSAGE, Today is $DAY_OF_WEEK!"
